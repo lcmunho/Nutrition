@@ -10,12 +10,13 @@
 		13B2DFFD2A3A19F6008E270E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2DFFC2A3A19F6008E270E /* AppDelegate.swift */; };
 		13B2DFFF2A3A19F6008E270E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2DFFE2A3A19F6008E270E /* SceneDelegate.swift */; };
 		13B2E0012A3A19F6008E270E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2E0002A3A19F6008E270E /* ViewController.swift */; };
-		13B2E0042A3A19F6008E270E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B2E0022A3A19F6008E270E /* Main.storyboard */; };
 		13B2E0062A3A19FA008E270E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B2E0052A3A19FA008E270E /* Assets.xcassets */; };
 		13B2E0092A3A19FA008E270E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B2E0072A3A19FA008E270E /* LaunchScreen.storyboard */; };
 		13B2E0142A3A19FB008E270E /* NutritionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2E0132A3A19FB008E270E /* NutritionTests.swift */; };
 		13B2E01E2A3A19FB008E270E /* NutritionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2E01D2A3A19FB008E270E /* NutritionUITests.swift */; };
 		13B2E0202A3A19FB008E270E /* NutritionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2E01F2A3A19FB008E270E /* NutritionUITestsLaunchTests.swift */; };
+		13B2E02E2A3A381A008E270E /* BuildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2E02D2A3A381A008E270E /* BuildView.swift */; };
+		13B2E0332A3A38C2008E270E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2E0322A3A38C2008E270E /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		13B2DFFC2A3A19F6008E270E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13B2DFFE2A3A19F6008E270E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		13B2E0002A3A19F6008E270E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		13B2E0032A3A19F6008E270E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13B2E0052A3A19FA008E270E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13B2E0082A3A19FA008E270E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13B2E00A2A3A19FA008E270E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		13B2E0192A3A19FB008E270E /* NutritionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutritionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B2E01D2A3A19FB008E270E /* NutritionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionUITests.swift; sourceTree = "<group>"; };
 		13B2E01F2A3A19FB008E270E /* NutritionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13B2E02D2A3A381A008E270E /* BuildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildView.swift; sourceTree = "<group>"; };
+		13B2E0322A3A38C2008E270E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +101,10 @@
 		13B2DFFB2A3A19F6008E270E /* Nutrition */ = {
 			isa = PBXGroup;
 			children = (
+				13B2E02F2A3A3873008E270E /* Login */,
+				13B2E02C2A3A3801008E270E /* Commons */,
 				13B2DFFC2A3A19F6008E270E /* AppDelegate.swift */,
 				13B2DFFE2A3A19F6008E270E /* SceneDelegate.swift */,
-				13B2E0002A3A19F6008E270E /* ViewController.swift */,
-				13B2E0022A3A19F6008E270E /* Main.storyboard */,
 				13B2E0052A3A19FA008E270E /* Assets.xcassets */,
 				13B2E0072A3A19FA008E270E /* LaunchScreen.storyboard */,
 				13B2E00A2A3A19FA008E270E /* Info.plist */,
@@ -125,6 +127,39 @@
 				13B2E01F2A3A19FB008E270E /* NutritionUITestsLaunchTests.swift */,
 			);
 			path = NutritionUITests;
+			sourceTree = "<group>";
+		};
+		13B2E02C2A3A3801008E270E /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				13B2E02D2A3A381A008E270E /* BuildView.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		13B2E02F2A3A3873008E270E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				13B2E0312A3A389C008E270E /* View */,
+				13B2E0302A3A3887008E270E /* ViewController */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		13B2E0302A3A3887008E270E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				13B2E0002A3A19F6008E270E /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		13B2E0312A3A389C008E270E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13B2E0322A3A38C2008E270E /* LoginView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +268,6 @@
 			files = (
 				13B2E0092A3A19FA008E270E /* LaunchScreen.storyboard in Resources */,
 				13B2E0062A3A19FA008E270E /* Assets.xcassets in Resources */,
-				13B2E0042A3A19F6008E270E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +293,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B2E0012A3A19F6008E270E /* ViewController.swift in Sources */,
+				13B2E02E2A3A381A008E270E /* BuildView.swift in Sources */,
 				13B2DFFD2A3A19F6008E270E /* AppDelegate.swift in Sources */,
+				13B2E0332A3A38C2008E270E /* LoginView.swift in Sources */,
 				13B2DFFF2A3A19F6008E270E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		13B2E0022A3A19F6008E270E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13B2E0032A3A19F6008E270E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		13B2E0072A3A19FA008E270E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,7 +469,7 @@
 				INFOPLIST_FILE = Nutrition/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +496,7 @@
 				INFOPLIST_FILE = Nutrition/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
