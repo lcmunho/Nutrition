@@ -36,6 +36,7 @@ class LoginView: UIView {
         textField.keyboardType = .emailAddress
         textField.placeholder = "Digite seu email"
         textField.textColor = .darkGray
+        textField.layer.cornerRadius = 12.0
         return textField
     }()
     
@@ -49,9 +50,21 @@ class LoginView: UIView {
         textField.placeholder = "Digite sua senha"
         textField.textColor = .darkGray
         textField.isSecureTextEntry = true
+        textField.layer.cornerRadius = 12.0
         return textField
     }()
     
+    private var loginButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Entrar", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        button.setTitleColor(.white, for: .focused)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 12.0
+        button.backgroundColor = UIColor(red: 255/255, green: 104/255, blue: 0/255, alpha: 1.0)
+        return button
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -75,6 +88,7 @@ extension LoginView: BuildView {
         addSubview(logoImageView)
         addSubview(emailTextfield)
         addSubview(passwordTextfield)
+        addSubview(loginButton)
     }
     
     func setupConstraints() {
@@ -97,10 +111,14 @@ extension LoginView: BuildView {
             passwordTextfield.topAnchor.constraint(equalTo: emailTextfield.bottomAnchor, constant: 12),
             passwordTextfield.leadingAnchor.constraint(equalTo: emailTextfield.leadingAnchor),
             passwordTextfield.trailingAnchor.constraint(equalTo: emailTextfield.trailingAnchor),
-            passwordTextfield.heightAnchor.constraint(equalTo: emailTextfield.heightAnchor)
+            passwordTextfield.heightAnchor.constraint(equalTo: emailTextfield.heightAnchor),
+            
+            loginButton.topAnchor.constraint(equalTo: passwordTextfield.bottomAnchor, constant: 22),
+            loginButton.leadingAnchor.constraint(equalTo: emailTextfield.leadingAnchor),
+            loginButton.trailingAnchor.constraint(equalTo: emailTextfield.trailingAnchor),
+            loginButton.heightAnchor.constraint(equalTo: emailTextfield.heightAnchor)
             
             
-        
         ])
         
     }
