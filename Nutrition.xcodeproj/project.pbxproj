@@ -15,7 +15,7 @@
 		13B2E0142A3A19FB008E270E /* NutritionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2E0132A3A19FB008E270E /* NutritionTests.swift */; };
 		13B2E01E2A3A19FB008E270E /* NutritionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2E01D2A3A19FB008E270E /* NutritionUITests.swift */; };
 		13B2E0202A3A19FB008E270E /* NutritionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2E01F2A3A19FB008E270E /* NutritionUITestsLaunchTests.swift */; };
-		13B2E02E2A3A381A008E270E /* BuildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2E02D2A3A381A008E270E /* BuildView.swift */; };
+		13B2E02E2A3A381A008E270E /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2E02D2A3A381A008E270E /* ViewCoding.swift */; };
 		13B2E0332A3A38C2008E270E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2E0322A3A38C2008E270E /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +49,7 @@
 		13B2E0192A3A19FB008E270E /* NutritionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutritionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B2E01D2A3A19FB008E270E /* NutritionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionUITests.swift; sourceTree = "<group>"; };
 		13B2E01F2A3A19FB008E270E /* NutritionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		13B2E02D2A3A381A008E270E /* BuildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildView.swift; sourceTree = "<group>"; };
+		13B2E02D2A3A381A008E270E /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
 		13B2E0322A3A38C2008E270E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +132,7 @@
 		13B2E02C2A3A3801008E270E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				13B2E02D2A3A381A008E270E /* BuildView.swift */,
+				13B2E02D2A3A381A008E270E /* ViewCoding.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B2E0012A3A19F6008E270E /* ViewController.swift in Sources */,
-				13B2E02E2A3A381A008E270E /* BuildView.swift in Sources */,
+				13B2E02E2A3A381A008E270E /* ViewCoding.swift in Sources */,
 				13B2DFFD2A3A19F6008E270E /* AppDelegate.swift in Sources */,
 				13B2E0332A3A38C2008E270E /* LoginView.swift in Sources */,
 				13B2DFFF2A3A19F6008E270E /* SceneDelegate.swift in Sources */,

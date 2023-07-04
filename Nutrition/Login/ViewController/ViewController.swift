@@ -18,9 +18,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
     }
-
-
 }
 
+//extension ViewController: UITextFieldDelegate {
+//
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+////        loginView?.validTextfields()
+//    }
+//
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
+//}

@@ -7,94 +7,52 @@
 
 import UIKit
 
-class LoginView: UIView {
+final class LoginView: UIView {
     
-    private lazy var loginLabel: UILabel = {
-       let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Faça seu Login"
-        label.font = UIFont(name: "Chalkduster", size: 38)
-        label.textColor = .white
-        return label
-    }()
+    private let loginLabel: UILabel
+    private let logoImageView: UIImageView
+    private let emailTextfield: UITextField
+    private let passwordTextfield: UITextField
+    private let loginButton: UIButton
+    private let registerButton: UIButton
     
-    private lazy var logoImageView: UIImageView = {
-       let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "login")
-        image.tintColor = .white
-        image.contentMode = .scaleAspectFit
-        return image
-    }()
-    
-    private lazy var emailTextfield: UITextField = {
-       let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.autocorrectionType = .no
-        textField.backgroundColor = .white
-        textField.borderStyle = .roundedRect
-        textField.keyboardType = .emailAddress
-        textField.placeholder = "Digite seu email"
-        textField.textColor = .darkGray
-        textField.layer.cornerRadius = 12.0
-        return textField
-    }()
-    
-    private lazy var passwordTextfield: UITextField = {
-       let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.autocorrectionType = .no
-        textField.backgroundColor = .white
-        textField.borderStyle = .roundedRect
-        textField.keyboardType = .default
-        textField.placeholder = "Digite sua senha"
-        textField.textColor = .darkGray
-        textField.isSecureTextEntry = true
-        textField.layer.cornerRadius = 12.0
-        return textField
-    }()
-    
-    private var loginButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Entrar", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        button.setTitleColor(.white, for: .focused)
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 12.0
-        button.backgroundColor = UIColor(red: 255/255, green: 104/255, blue: 0/255, alpha: 1.0)
-        return button
-    }()
-
     override init(frame: CGRect) {
+        loginLabel = UILabel()
+        logoImageView = UIImageView()
+        emailTextfield = UITextField()
+        passwordTextfield = UITextField()
+        loginButton = UIButton()
+        registerButton = UIButton()
+        
         super.init(frame: frame)
-        configBackgroundColor()
         setupView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    private func configBackgroundColor() {
-        backgroundColor = .orange
-    }
 }
 
-extension LoginView: BuildView {
-    
-    func buildViewHierarchy() {
+extension LoginView: ViewCoding {
+    func buildHierarchy() {
         addSubview(loginLabel)
         addSubview(logoImageView)
         addSubview(emailTextfield)
         addSubview(passwordTextfield)
         addSubview(loginButton)
+        addSubview(registerButton)
     }
     
-    func setupConstraints() {
-    
-        NSLayoutConstraint.activate([
+    func buildConstraints() {
+        loginLabel.translatesAutoresizingMaskIntoConstraints = false
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
+        emailTextfield.translatesAutoresizingMaskIntoConstraints = false
+        passwordTextfield.translatesAutoresizingMaskIntoConstraints = false
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
+        registerButton.translatesAutoresizingMaskIntoConstraints = false
         
+        NSLayoutConstraint.activate([
+            
             loginLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
             loginLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
@@ -116,12 +74,56 @@ extension LoginView: BuildView {
             loginButton.topAnchor.constraint(equalTo: passwordTextfield.bottomAnchor, constant: 22),
             loginButton.leadingAnchor.constraint(equalTo: emailTextfield.leadingAnchor),
             loginButton.trailingAnchor.constraint(equalTo: emailTextfield.trailingAnchor),
-            loginButton.heightAnchor.constraint(equalTo: emailTextfield.heightAnchor)
+            loginButton.heightAnchor.constraint(equalTo: emailTextfield.heightAnchor),
             
+            registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 50),
+            registerButton.leadingAnchor.constraint(equalTo: emailTextfield.leadingAnchor),
+            registerButton.trailingAnchor.constraint(equalTo: emailTextfield.trailingAnchor),
             
         ])
-        
     }
     
-    
+    func render() {
+        backgroundColor = .orange
+        
+        
+        loginLabel.text = "Faça seu Login"
+        loginLabel.font = UIFont(name: "Chalkduster", size: 38)
+        loginLabel.textColor = .white
+        
+        logoImageView.image = UIImage(named: "login")
+        logoImageView.tintColor = .white
+        logoImageView.contentMode = .scaleAspectFit
+        
+        emailTextfield.autocorrectionType = .no
+        emailTextfield.backgroundColor = .white
+        emailTextfield.borderStyle = .roundedRect
+        emailTextfield.keyboardType = .emailAddress
+        emailTextfield.placeholder = "Digite seu email"
+        emailTextfield.textColor = .darkGray
+        emailTextfield.layer.cornerRadius = 12.0
+        
+        passwordTextfield.autocorrectionType = .no
+        passwordTextfield.backgroundColor = .white
+        passwordTextfield.borderStyle = .roundedRect
+        passwordTextfield.keyboardType = .default
+        passwordTextfield.placeholder = "Digite sua senha"
+        passwordTextfield.textColor = .darkGray
+        passwordTextfield.isSecureTextEntry = true
+        passwordTextfield.layer.cornerRadius = 12.0
+        
+        loginButton.setTitle("Entrar", for: .normal)
+        loginButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        loginButton.setTitleColor(.white, for: .focused)
+        loginButton.clipsToBounds = true
+        loginButton.layer.cornerRadius = 12.0
+        loginButton.backgroundColor = UIColor(red: 255/255, green: 104/255, blue: 0/255, alpha: 1.0)
+        
+        
+        registerButton.setTitle("Não tem conta? Cadastre-se!", for: .normal)
+        registerButton.titleLabel?.font = UIFont(name: "Chalkduster", size: 18)
+        registerButton.setTitleColor(.white, for: .focused)
+        registerButton.clipsToBounds = true
+        registerButton.backgroundColor = .clear
+    }
 }
